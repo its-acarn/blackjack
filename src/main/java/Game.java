@@ -86,5 +86,28 @@ public class Game {
         }
     }
 
+    public void totalDealerScore() {
+        int dealerScore = this.dealer.getScore();
 
+        for(int i = 0; i < this.dealer.handCardCount(); i++) {
+            dealerScore = dealerScore + this.dealer.getHand().get(i).getValueRank();
+            this.dealer.setScore(dealerScore);
+        }
+    }
+
+    public String determineWinner() {
+        int dealerScore = this.dealer.getScore();
+        int playerScore = this.players.get(0).getScore();
+
+        if(dealerScore > playerScore) {
+            System.out.println(this.dealer.getName());
+            return "Dealer";
+        } else if (playerScore > dealerScore) {
+            System.out.println(this.players.get(0).getName());
+            return "Player";
+        } else {
+            System.out.println("DRAW");
+            return "DRAW";
+        }
+    }
 }

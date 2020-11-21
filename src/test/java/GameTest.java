@@ -88,6 +88,33 @@ public class GameTest {
         assertEquals(2, game.getPlayers().get(1).getScore());
     }
 
+    @Test
+    public void checkDealerScore() {
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.dealerStartingHand();
+        game.totalDealerScore();
+        assertEquals(2, game.getDealer().getScore());
+    }
 
+    @Test
+    public void checkDetermineWinner() {
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+
+        game.addPlayers(1);
+        game.playersStartingHand();
+        game.dealerStartingHand();
+        game.totalPlayerScores();
+        game.totalDealerScore();
+        assertEquals("DRAW", game.determineWinner());
+    }
     
 }
