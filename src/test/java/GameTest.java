@@ -43,6 +43,14 @@ public class GameTest {
         assertEquals(2, game.getPlayers().get(0).handCardCount());
     }
 
+    @Test
+    public void checkCardsRemovedFromDeckOnStartDeal() {
+        game.prepareDeck();
+        game.addPlayers(2);
+        game.playerStartingHand();
+        assertEquals(48, game.getDeck().getNumOfCards());
+    }
+
 
 
     
