@@ -99,7 +99,7 @@ public class GameTest {
     }
 
     @Test
-    public void checkDetermineWinner() {
+    public void checkDetermineWinner__onePlayer() {
         game.getDeck().addCardToDeck(cardACESPADES);
         game.getDeck().addCardToDeck(cardACESPADES);
         game.getDeck().addCardToDeck(cardACESPADES);
@@ -114,7 +114,8 @@ public class GameTest {
         game.dealerStartingHand();
         game.totalPlayerScores();
         game.totalDealerScore();
-        assertEquals("DRAW", game.determineWinner());
+        assertEquals("DRAW", game.determineWinnerWithOnePlayer());
+        System.out.println(game.getPlayers().get(0).getScore());
     }
     
 }

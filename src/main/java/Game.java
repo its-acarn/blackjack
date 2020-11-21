@@ -95,7 +95,7 @@ public class Game {
         }
     }
 
-    public String determineWinner() {
+    public String determineWinnerWithOnePlayer() {
         int dealerScore = this.dealer.getScore();
         int playerScore = this.players.get(0).getScore();
 
