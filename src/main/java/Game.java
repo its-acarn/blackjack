@@ -3,10 +3,12 @@ import java.util.ArrayList;
 public class Game {
 
     private Deck deck;
+    private Player dealer;
     private ArrayList<Player> players;
 
     public Game(Deck deck) {
         this.deck = deck;
+        this.dealer = new Player("DEALER");
         this.players = new ArrayList<>();
     }
 
@@ -17,6 +19,14 @@ public class Game {
 
     public void setDeck(Deck deck) {
         this.deck = deck;
+    }
+
+    public Player getDealer() {
+        return this.dealer;
+    }
+
+    public void setDealer(Player dealer) {
+        this.dealer = dealer;
     }
 
     public ArrayList<Player> getPlayers() {
@@ -54,10 +64,14 @@ public class Game {
         return twoCards;
     }
 
-    public void playerStartingHand() {
+    public void playersStartingHand() {
         for(int i = 0; i < this.playerCount(); i++) {
             this.players.get(i).setStartingHand(this.startDeal());
         }
+    }
+
+    public void dealerStartingHand() {
+        this.dealer.setStartingHand(this.startDeal());
     }
 
 

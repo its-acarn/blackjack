@@ -39,16 +39,26 @@ public class GameTest {
     public void checkStartHandOfPlayers() {
         game.prepareDeck();
         game.addPlayers(2);
-        game.playerStartingHand();
+        game.playersStartingHand();
         assertEquals(2, game.getPlayers().get(0).handCardCount());
+    }
+
+    @Test
+    public void checkStartHandOfDealer() {
+        game.prepareDeck();
+        game.addPlayers(2);
+        game.playersStartingHand();
+        game.dealerStartingHand();
+        assertEquals(2, game.getDealer().handCardCount());
     }
 
     @Test
     public void checkCardsRemovedFromDeckOnStartDeal() {
         game.prepareDeck();
         game.addPlayers(2);
-        game.playerStartingHand();
-        assertEquals(48, game.getDeck().getNumOfCards());
+        game.playersStartingHand();
+        game.dealerStartingHand();
+        assertEquals(46, game.getDeck().getNumOfCards());
     }
 
 
