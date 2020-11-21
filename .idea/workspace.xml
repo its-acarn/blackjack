@@ -16,13 +16,19 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:blackjack" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7948e96-3036-4f41-9171-ab0173f24156" name="Default Changelist" comment="" />
+    <list default="true" id="d7948e96-3036-4f41-9171-ab0173f24156" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +68,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in blackjack_we_hw">
+  <component name="RunManager" selected="JUnit.DeckTest.canStartDeal">
     <configuration name="All in blackjack_we_hw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blackjack_we_hw" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,8 +85,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeckTest.canStartDeal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blackjack_we_hw" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="canStartDeal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.playerHasHand__twoCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blackjack_we_hw" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="playerHasHand__twoCards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeckTest.canStartDeal" />
+        <item itemvalue="JUnit.PlayerTest.playerHasHand__twoCards" />
         <item itemvalue="JUnit.All in blackjack_we_hw" />
         <item itemvalue="JUnit.All in highest_card" />
       </list>
@@ -110,37 +138,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2213" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1605899730053">
+    <state x="2213" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1605952268918">
       <screen x="1440" y="-101" width="1920" height="1080" />
     </state>
-    <state x="2213" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605899730053" />
+    <state x="2213" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605952268918" />
     <state x="2213" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605802472760" />
     <state x="2185" y="313" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605794036124">
       <screen x="1440" y="-99" width="1920" height="1080" />
     </state>
     <state x="2185" y="313" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605794036124" />
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1605950698729">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1605952147595">
       <screen x="1440" y="-101" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605950698729" />
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605952147595" />
     <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605805443319" />
     <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605803365016" />
-    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1605950698726">
+    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1605952147593">
       <screen x="1440" y="-101" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605950698726" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605952147593" />
     <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605805443317" />
     <state width="1878" height="305" key="GridCell.Tab.0.center/0.23.1440.877/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605803365013" />
-    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1605950698724">
+    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1605952147592">
       <screen x="1440" y="-101" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605950698724" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605952147592" />
     <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605805443316" />
     <state width="1878" height="305" key="GridCell.Tab.0.left/0.23.1440.877/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605803365011" />
-    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1605950698728">
+    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1605952147594">
       <screen x="1440" y="-101" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605950698728" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/1440.-101.1920.1080@1440.-101.1920.1080" timestamp="1605952147594" />
     <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605805443318" />
     <state width="1878" height="305" key="GridCell.Tab.0.right/0.23.1440.877/1440.-99.1920.1080@1440.-99.1920.1080" timestamp="1605803365014" />
   </component>

@@ -5,10 +5,21 @@ import java.util.Collections;
 public class Deck {
     private ArrayList<Card> cardDeck;
 
+//    Constructor
     public Deck(){
         this.cardDeck = new ArrayList<>();
     }
 
+//    Getter and setter
+    public ArrayList<Card> getCardDeck() {
+        return this.cardDeck;
+    }
+
+    public void setCardDeck(ArrayList<Card> cardDeck) {
+        this.cardDeck = cardDeck;
+    }
+
+    //  Deck logic
     public int getNumOfCards() {
         return this.cardDeck.size();
     }
@@ -23,13 +34,21 @@ public class Deck {
             }
         }
     }
+
     public void shuffle() {
         Collections.shuffle(this.cardDeck);
     }
 
-    public Card deal() {
-        Card cardDealt = this.cardDeck.get(0);
-        this.cardDeck.remove(cardDealt);
-        return cardDealt;
+    public ArrayList<Card> startDeal() {
+        ArrayList<Card> twoCards = new ArrayList<>();
+        for(int i = 0; i < 2; i++) {
+            Card cardDealt = this.cardDeck.get(i);
+            this.cardDeck.remove(cardDealt);
+            twoCards.add(cardDealt);
+        }
+
+        return twoCards;
     }
+
+//    public
 }

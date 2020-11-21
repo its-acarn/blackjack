@@ -24,9 +24,9 @@ public class DeckTest {
     }
 
      @Test
-     public void canDealOneCard() {
+     public void canStartDeal() {
          deck.populate();
-         deck.deal();
-         assertEquals(51, deck.getNumOfCards());
+         deck.startDeal();
+         assertEquals(50, deck.getNumOfCards());
      }
 }
