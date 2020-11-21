@@ -8,6 +8,7 @@ public class GameTest {
     Player playerOne;
     Player playerTwo;
     Game game;
+    Card cardACESPADES;
 
     @Before
     public void before() {
@@ -15,6 +16,7 @@ public class GameTest {
         playerOne = new Player("Iain");
         playerTwo = new Player("Andrew");
         game = new Game(deck);
+        cardACESPADES = new Card(CardSuit.SPADES, CardRank.ACE);
     }
 
     @Test
@@ -61,6 +63,30 @@ public class GameTest {
         assertEquals(46, game.getDeck().getNumOfCards());
     }
 
+    @Test
+    public void checkPlayerScore__onePlayer() {
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.addPlayers(1);
+        game.playersStartingHand();
+        game.totalPlayerScores();
+        assertEquals(2, game.getPlayers().get(0).getScore());
+    }
+
+    @Test
+    public void checkPlayerScore__twoPlayers() {
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.getDeck().addCardToDeck(cardACESPADES);
+        game.addPlayers(2);
+        game.playersStartingHand();
+        game.totalPlayerScores();
+        assertEquals(2, game.getPlayers().get(0).getScore());
+        assertEquals(2, game.getPlayers().get(1).getScore());
+    }
 
 
     

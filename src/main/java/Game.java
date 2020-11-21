@@ -48,7 +48,7 @@ public class Game {
     }
 
     public void addPlayers(int num_of_players) {
-        for(int i = 1; i < num_of_players +1; i++) {
+        for(int i = 1; i < (num_of_players + 1); i++) {
             this.players.add(new Player(Integer.toString(i)));
         }
     }
@@ -72,6 +72,18 @@ public class Game {
 
     public void dealerStartingHand() {
         this.dealer.setStartingHand(this.startDeal());
+    }
+
+    public void totalPlayerScores() {
+        for(int i = 0; i < this.playerCount(); i++) {
+            Player player = this.players.get(i);
+            int totalScore = player.getScore();
+
+            for(int j = 0; j < player.handCardCount(); j++) {
+                totalScore = totalScore + player.getHand().get(j).getValueRank();
+                player.setScore(totalScore);
+            }
+        }
     }
 
 

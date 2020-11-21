@@ -9,7 +9,7 @@ public class Player {
     public Player(String name) {
         this.name = name;
         this.hand = new ArrayList<>();
-        this.score = score;
+        this.score = 0;
     }
 
     //Getters and setters

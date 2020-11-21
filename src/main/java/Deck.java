@@ -20,6 +20,10 @@ public class Deck {
     }
 
     //  Deck logic
+    public void addCardToDeck(Card card) {
+        this.cardDeck.add(card);
+    }
+
     public int getNumOfCards() {
         return this.cardDeck.size();
     }
