@@ -19,15 +19,22 @@ public class PlayerTest {
     }
 
     @Test
-    public void playerHasHand__oneCard() {
-        playerOne.setHand(cardOne);
+    public void checkStartingHand() {
+        assertEquals(0, playerOne.handCardCount());
+    }
+
+    @Test
+    public void canAddCardToHand__oneCard() {
+        playerOne.addToHand(cardOne);
         assertEquals(1, playerOne.handCardCount());
     }
 
     @Test
-    public void playerHasHand__twoCards() {
-        playerOne.setHand(cardOne);
-        playerOne.setHand(cardTwo);
+    public void canAddCardToHand__twoCards() {
+        playerOne.addToHand(cardOne);
+        playerOne.addToHand(cardTwo);
         assertEquals(2, playerOne.handCardCount());
     }
+
+
 }

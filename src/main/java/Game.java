@@ -54,6 +54,12 @@ public class Game {
         return twoCards;
     }
 
+    public void playerStartingHand() {
+        for(int i = 0; i < this.playerCount(); i++) {
+            this.players.get(i).setStartingHand(this.startDeal());
+        }
+    }
+
 //    public void dealCards() {
 //        for (Player player : players) {
 //            player.setHand(deck.deal());

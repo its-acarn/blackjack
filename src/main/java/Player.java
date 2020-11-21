@@ -25,10 +25,6 @@ public class Player {
         return this.hand;
     }
 
-    public void setHand(Card card) {
-        this.hand.add(card);
-    }
-
     public int getScore() {
         return this.score;
     }
@@ -39,5 +35,13 @@ public class Player {
     //Further logic on player
     public int handCardCount() {
         return this.hand.size();
+    }
+
+    public void setStartingHand(ArrayList<Card> startingHand) {
+        this.hand = startingHand;
+    }
+
+    public void addToHand(Card card) {
+        this.hand.add(card);
     }
 }

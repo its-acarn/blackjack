@@ -26,10 +26,22 @@ public class GameTest {
     public void gamePlayersTwo() {
         game.addPlayers(2);
         assertEquals(2, game.playerCount());
-        System.out.println(game.getPlayers().get(0).getName());
-        System.out.println(game.getPlayers().get(1).getName());
     }
 
+    @Test
+    public void checkStartDeal() {
+        game.prepareDeck();
+        game.startDeal();
+        assertEquals(2, game.startDeal().size());
+    }
+
+    @Test
+    public void checkStartHandOfPlayers() {
+        game.prepareDeck();
+        game.addPlayers(2);
+        game.playerStartingHand();
+        assertEquals(2, game.getPlayers().get(0).handCardCount());
+    }
 
 
 
