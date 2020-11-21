@@ -10,7 +10,7 @@ public class Game {
         this.players = new ArrayList<>();
     }
 
-    //Getters & Setters
+//  Getters & Setters
     public Deck getDeck() {
         return this.deck;
     }
@@ -27,7 +27,7 @@ public class Game {
         this.players = players;
     }
 
-    //Game Logic
+//  Game Logic
     public int playerCount() {
         return this.players.size();
     }
@@ -38,9 +38,20 @@ public class Game {
     }
 
     public void addPlayers(int num_of_players) {
-        for(int i = 1; i < num_of_players; i++) {
+        for(int i = 1; i < num_of_players +1; i++) {
             this.players.add(new Player(Integer.toString(i)));
         }
+    }
+
+    public ArrayList<Card> startDeal() {
+        ArrayList<Card> twoCards = new ArrayList<>();
+        for(int i = 0; i < 2; i++) {
+            Card cardDealt = this.deck.getCardDeck().get(i);
+            this.deck.getCardDeck().remove(cardDealt);
+            twoCards.add(cardDealt);
+        }
+
+        return twoCards;
     }
 
 //    public void dealCards() {

@@ -22,11 +22,4 @@ public class DeckTest {
         deck.populate();
         assertEquals(52, deck.getNumOfCards());
     }
-
-     @Test
-     public void canStartDeal() {
-         deck.populate();
-         deck.startDeal();
-         assertEquals(50, deck.getNumOfCards());
-     }
 }

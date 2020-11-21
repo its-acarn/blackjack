@@ -38,17 +38,4 @@ public class Deck {
     public void shuffle() {
         Collections.shuffle(this.cardDeck);
     }
-
-    public ArrayList<Card> startDeal() {
-        ArrayList<Card> twoCards = new ArrayList<>();
-        for(int i = 0; i < 2; i++) {
-            Card cardDealt = this.cardDeck.get(i);
-            this.cardDeck.remove(cardDealt);
-            twoCards.add(cardDealt);
-        }
-
-        return twoCards;
-    }
-
-//    public
 }
