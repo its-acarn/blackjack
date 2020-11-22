@@ -74,6 +74,16 @@ public class Game {
         this.dealer.setStartingHand(this.startDeal());
     }
 
+    public void showCards() {
+        Player player;
+        for(int i = 0; i < this.playerCount(); i++) {
+            player = this.players.get(i);
+            System.out.println(String.format("Player %s cards are: %s of %s | %s of %s.", player.getName(), player.getHand().get(0).getRank(), player.getHand().get(0).getSuit(), player.getHand().get(1).getRank(), player.getHand().get(1).getSuit()));
+        };
+
+        System.out.println(String.format("Dealers cards are: %s of %s | %s of %s.", this.dealer.getHand().get(0).getRank(), this.dealer.getHand().get(0).getSuit(), this.dealer.getHand().get(1).getRank(), this.dealer.getHand().get(1).getSuit()));
+    }
+
     public void totalPlayerScores() {
         for(int i = 0; i < this.playerCount(); i++) {
             Player player = this.players.get(i);
@@ -100,13 +110,13 @@ public class Game {
         int playerScore = this.players.get(0).getScore();
 
         if(dealerScore > playerScore) {
-            System.out.println(this.dealer.getName());
+            System.out.println(String.format("The %s is the winner!", this.dealer.getName()));
             return "Dealer";
         } else if (playerScore > dealerScore) {
-            System.out.println(this.players.get(0).getName());
+            System.out.println(String.format("Player %s is the winner!", this.players.get(0).getName()));
             return "Player";
         } else {
-            System.out.println("DRAW");
+            System.out.println("The scores are the same, it is a DRAW.");
             return "DRAW";
         }
     }

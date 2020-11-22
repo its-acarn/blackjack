@@ -84,6 +84,7 @@ public class GameTest {
         game.addPlayers(2);
         game.playersStartingHand();
         game.totalPlayerScores();
+        game.showCards();
         assertEquals(2, game.getPlayers().get(0).getScore());
         assertEquals(2, game.getPlayers().get(1).getScore());
     }
@@ -114,8 +115,8 @@ public class GameTest {
         game.dealerStartingHand();
         game.totalPlayerScores();
         game.totalDealerScore();
-        assertEquals("DRAW", game.determineWinnerWithOnePlayer());
-        System.out.println(game.getPlayers().get(0).getScore());
+        game.showCards();
+        assertEquals("The scores are the same, it is a DRAW", game.determineWinnerWithOnePlayer());
     }
     
 }
